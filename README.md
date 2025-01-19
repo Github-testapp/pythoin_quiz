@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Python認定試験 学習支援アプリ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 開発の背景と目的
+Python認定試験の学習において、以下の課題を解決するために開発しました：
+- 問題演習の途中で中断すると最初からやり直しが必要
+- 進捗状況が保存されない
+- 間違えた問題の復習がしづらい
+- レベルに応じた段階的な学習が難しい
 
-## Available Scripts
+## アプリケーションの特徴
+- 3つの試験カテゴリー（基礎/データ分析/実践）に対応
+- 各カテゴリーで3段階（初級/中級/上級）の難易度設定
+- LocalStorageを使用した進捗管理
+- レスポンシブデザインによるマルチデバイス対応
 
-In the project directory, you can run:
+## 使用技術
+- **フロントエンド**
+  - React
+  - React Router
+  - TailwindCSS
+- **アイコン**
+  - Lucide React
+- **データ管理**
+  - LocalStorage
+  - React Hooks
+
+## インストール方法
+
+```bash
+# リポジトリのクローン
+git clone [リポジトリURL]
+
+# プロジェクトディレクトリへ移動
+cd python-quiz-app
+
+# 依存パッケージのインストール
+npm install
+```
+
+## 利用可能なコマンド
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+開発モードでアプリを起動します。\
+[http://localhost:3000](http://localhost:3000) を開いてブラウザで表示。\
+コードの変更時に自動でリロードされます。
 
 ### `npm run build`
+本番用のアプリをビルドして `build` フォルダに出力します。\
+React を本番モードで適切にバンドルし、最適化されたビルドを作成します。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## アプリケーション構造
+```
+python-quiz-app/
+├── public/
+│   └── index.html
+└── src/
+    ├── components/
+    │   ├── Layout.jsx    # 共通レイアウト
+    │   ├── Quiz.jsx      # クイズコンポーネント
+    │   └── Home.jsx      # ホーム画面
+    ├── data/
+    │   ├── basicQuizData.js      # 基礎試験の問題
+    │   ├── analysisQuizData.js   # データ分析試験の問題
+    │   ├── practiceQuizData.js   # 実践試験の問題
+    │   └── index.js      # データまとめ
+    ├── App.jsx           # メインアプリケーション
+    └── index.js          # エントリーポイント
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 今後の開発予定
+- ユーザー認証の実装
+- 問題の解答履歴分析機能
+- 苦手分野の可視化
+- 模擬試験モードの追加
+- 問題データベースの拡充
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ライセンス
+MIT
 
-### `npm run eject`
+## 作者
+[あなたの名前]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 謝辞
+このプロジェクトは [Create React App](https://github.com/facebook/create-react-app) を使用して作成されました。
